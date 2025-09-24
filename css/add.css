@@ -1,0 +1,335 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  /* ベースフォント */
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  color: #252525;
+}
+
+::placeholder{
+  color: #757575;
+}
+
+
+.orange_gd{
+  background: linear-gradient(90deg, rgba(235, 166, 52, 1) 0%, rgba(234, 91, 52, 1) 100%);
+}
+
+.cta_bg{
+  background: url(../images/cta_bg.png) no-repeat top center/cover;
+}
+
+.slide_shadow{
+  box-shadow: 0 0 0.22rem rgba(21, 168, 225, .15);
+}
+
+.reason_shadow{
+  box-shadow: 0 0 0.14rem rgba(132, 177, 195, .55);
+}
+
+.cta_bg02 {
+  background: url(../images/cta_bg02.png) no-repeat top center/cover;
+}
+
+.sample_shadow{
+  box-shadow: 0 0 0.05rem rgba(21, 168, 225, .15);
+}
+
+.support_shadow {
+  box-shadow: 0 0 0.1rem rgba(21, 168, 225, .2);
+}
+
+.step_shadow{
+  box-shadow: 0 0 0.14rem rgba(21, 168, 225, .2);
+}
+
+.faq_shadow{
+  box-shadow: 0 0 0.05rem rgba(21, 168, 225, .15);
+}
+
+.title01.open{
+  max-height: 2.51rem;
+}
+
+.title02.open {
+  max-height: 15rem;
+}
+
+.title03.open {
+  max-height: 7.66rem;
+}
+
+.title04.open {
+  max-height: 3.45rem;
+}
+
+.title05.open {
+  max-height: 3.45rem;
+}
+
+.title06.open {
+  max-height: 3.45rem;
+}
+
+.title07.open {
+  max-height: 7.21rem;
+}
+
+.title08.open {
+  max-height: 3.92rem;
+}
+
+.title09.open {
+  max-height: 7.12rem;
+}
+
+.title10.open {
+  max-height: 4.84rem;
+}
+
+.title11.open {
+  max-height: 8.13rem;
+}
+
+.open div > div > span.open_line{
+  transform: rotate(0);
+}
+
+.hold_bg{
+  background: url(../images/hold_bg.png) no-repeat top center /cover;
+}
+
+@media (min-width: 768px) and (max-width: 880px) {
+
+.min800{
+  transform: scale(0.9);
+  transform-origin: left;
+}
+}
+
+/* anime */
+
+@keyframes keyv-circleLeft {
+  0% {
+    transform: translate(-3rem, 3rem);
+  }
+
+  100% {
+    transform: translate(0,0);
+  }
+}
+
+@keyframes keyv-circleRight {
+  0% {
+    transform: translate(3rem, -3rem);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes keyv-arrow {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(1rem, 0px);
+  }
+}
+
+@keyframes keyv-header {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes keyv-balloon01 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0rem, .6rem);
+  }
+}
+
+@keyframes keyv-balloon02 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(0rem, .6rem);
+  }
+}
+
+@keyframes keyv-balloon03 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(0rem, .6rem);
+  }
+}
+
+@keyframes keyv-balloon04 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(0rem, .6rem);
+  }
+}
+
+.anime-circleLeft{
+  animation-name: keyv-circleLeft;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-direction: normal;
+}
+
+.anime-circleRight {
+  animation-name: keyv-circleRight;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-delay: 0ms;
+  animation-direction: normal;
+}
+
+.anime-ctaArrow{
+    animation-name: keyv-arrow;
+    animation-fill-mode: backwards;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-delay: 2s;
+    animation-direction: normal;
+}
+
+.anime-header {
+  animation-name: keyv-header;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-delay: 1.6s;
+  animation-direction: normal;
+}
+
+.anime-balloon01{
+  opacity: 0;
+  transition-duration: 300ms;
+  animation-name: keyv-balloon01;
+  animation-fill-mode: forwards;
+  animation-duration: 1.4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-delay: 2.7s;
+  animation-direction: alternate;
+  animation-play-state: running;
+}
+
+.anime-balloon02 {
+  opacity: 0;
+  transition-duration: 300ms;
+  animation-name: keyv-balloon01;
+  animation-fill-mode: forwards;
+  animation-duration: 1.4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-delay: 2.9s;
+  animation-direction: alternate;
+  animation-play-state: running;
+}
+
+.anime-balloon03 {
+  opacity: 0;
+  transition-duration: 300ms;
+  animation-name: keyv-balloon01;
+  animation-fill-mode: forwards;
+  animation-duration: 1.4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-delay: 3.1s;
+  animation-direction: alternate;
+  animation-play-state: running;
+}
+
+.anime-balloon04 {
+  opacity: 0;
+  transition-duration: 300ms;
+  animation-name: keyv-balloon01;
+  animation-fill-mode: forwards;
+  animation-duration: 1.4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-delay: 3.3s;
+  animation-direction: alternate;
+  animation-play-state: running;
+}
+
+@media screen and (min-width:768px){
+  .cta_bg {
+      background: url(../images/cta_bg_pc.png) no-repeat top center/cover;
+    }
+  .cta_bg02 {
+    background: url(../images/cta_bg02_pc.png) no-repeat top center/cover;
+  }
+  .title01.open {
+    max-height: 2rem;
+  }
+
+  .title02.open {
+    max-height: 12.84rem;
+  }
+  .title03.open {
+    max-height: 4.57rem;
+  }
+  .title04.open {
+    max-height: 2.26rem;
+  }
+  .title05.open {
+    max-height: 4.57rem;
+  }
+
+  .title06.open {
+    max-height: 2.26rem;
+  }
+
+  .title07.open {
+    max-height: 2.92rem;
+  }
+
+  .title08.open {
+    max-height: 3rem;
+  }
+
+  .title09.open {
+    max-height: 4.96rem;
+  }
+
+  .title10.open {
+    max-height: 3.01rem;
+  }
+
+  .title11.open {
+    max-height: 4.57rem;
+  }
+  .hold_bg {
+    background: url(../images/hold_bg_pc.png) no-repeat top center /cover;
+  }
+}
