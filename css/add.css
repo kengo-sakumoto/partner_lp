@@ -101,6 +101,55 @@ html {
   background: url(../images/hold_bg.png) no-repeat top center /cover;
 }
 
+.tab-button-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  
+}
+.tab-button-container button {
+  color: #15a8e1;
+  background-color: white;
+  font-weight: bold;
+  border: 2px solid #15a8e1;
+  border-radius: 16px 16px 0px 0px;
+  padding: 20px;
+}
+.tab-button-container button.active {
+  color: white;
+  background-color: #15a8e1;
+  border: none;
+}
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+
+.requirements-table {
+  display: grid;
+  gap: 10px;
+}
+.requirements-table tr {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 20px;
+}
+.requirements-table th {
+  color: white;
+  background-color: #15a8e1;
+  padding: 10px;
+  box-shadow: 0 0 8px #84b1c368;
+}
+.requirements-table td {
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 0 8px #84b1c368;
+}
+.requirements-table a {
+  color: #15a8e1;
+}
+
 @media (min-width: 768px) and (max-width: 880px) {
 
 .min800{

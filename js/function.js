@@ -65,6 +65,26 @@ const openContent = (target) => {
   target.classList.toggle("open");
 }
 
+//タブ切り替え
+// ボタンとコンテンツを取得
+const buttons = document.querySelectorAll('.tab-button-container button');
+const contents = document.querySelectorAll('.tab-content');
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    // 全てのボタンから active を外す
+    buttons.forEach(btn => btn.classList.remove('active'));
+    // 全てのコンテンツから active を外す
+    contents.forEach(content => content.classList.remove('active'));
+
+    // クリックしたボタンを active に
+    button.classList.add('active');
+    // 対応するコンテンツを表示
+    const tabId = button.getAttribute('data-tab');
+    document.getElementById(tabId).classList.add('active');
+  });
+});
+
 
 //スライダー
 // const swiperOuter = document.getElementById('swiper-outer');
