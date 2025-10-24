@@ -118,12 +118,6 @@ html {
   color: white;
   background-color: #15a8e1;
 }
-.tab-content {
-  display: none;
-}
-.tab-content.active {
-  display: block;
-}
 @media screen and (max-width:767px){
   .tab-button-container button {
     padding: 10px;
