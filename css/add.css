@@ -17,6 +17,11 @@ html {
   background: linear-gradient(90deg, rgba(235, 166, 52, 1) 0%, rgba(234, 91, 52, 1) 100%);
 }
 
+.orange_gd.is-disabled {
+  background: #757575;
+  pointer-events: none
+}
+
 .cta_bg{
   background: url(../images/cta_bg.png) no-repeat top center/cover;
 }
