@@ -30,35 +30,38 @@ setTimeout(() => {
   }
 }, 3200);
 
-//追尾ボタン
+// 追尾ボタン
 const btn = document.getElementById('js-btn');
-//位置取得
-//body
-const body_h = document.getElementById('js-body').clientHeight;
-//header
-//fv
-const keyv_h = document.getElementById('js-keyv').clientHeight;
-//company
-const hiddenArea_h = document.getElementById('js-hiddenArea').clientHeight;
-//footer
-const footer_h = document.getElementById('js-footer').clientHeight;
-//holdbtn
-const holdbtn_h = btn.clientHeight;
-addEventListener('scroll', () => {
-  scroll_position = window.pageYOffset;
-  //fvの時消す
-  if (scroll_position < (keyv_h)) {
-    btn.classList.add('opacity-0');
-    btn.classList.add('pointer-events-none');
-    //formに入ったの時消す
-  } else if ((body_h - hiddenArea_h - holdbtn_h - footer_h) < scroll_position) {
-    btn.classList.add('opacity-0');
-    btn.classList.add('pointer-events-none');
-  } else {
-    btn.classList.remove('opacity-0');
-    btn.classList.remove('pointer-events-none');
-  }
-});
+const keyv = document.getElementById('js-keyv');
+const footer = document.getElementById('js-footer');
+
+// 追尾ボタンが存在する場合のみ実行
+if (btn && keyv && footer) {
+
+  const updateBtnVisibility = () => {
+    // ファーストビュー内にいるか
+    const isFirstView = keyv.getBoundingClientRect().bottom > 0;
+
+    // 追尾ボタンがフッターに到達したか
+    const isAtFooter =
+      footer.getBoundingClientRect().top <=
+      btn.getBoundingClientRect().bottom;
+
+    // 非表示条件
+    const shouldHide = isFirstView || isAtFooter;
+
+    btn.classList.toggle('opacity-0', shouldHide);
+    btn.classList.toggle('pointer-events-none', shouldHide);
+  };
+
+  // スクロール・画面サイズ変更時に判定
+  window.addEventListener('scroll', updateBtnVisibility, { passive: true });
+  window.addEventListener('resize', updateBtnVisibility);
+
+  // ページ読み込み時にも判定
+  updateBtnVisibility();
+}
+
 
 // //アコーディオン
 const openContent = (target) => {
