@@ -106,6 +106,14 @@ html {
   background: url(../images/hold_bg.png) no-repeat top center /cover;
 }
 
+.work-list {
+  grid-template-columns: repeat(2, 1fr);
+}
+.work-list-icon {
+  width: 40%;
+  margin: 20px auto 0px;
+}
+
 .tab-button-container{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -341,6 +349,9 @@ html {
 }
 
 @media screen and (min-width:768px){
+  .work-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
   .cta_bg {
       background: url(../images/cta_bg_pc.png) no-repeat top center/cover;
     }

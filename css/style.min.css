@@ -840,6 +840,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
+.h-auto {
+  height: auto;
+}
+.h-full {
+  height: 100%;
+}
 .h-o-22 {
   height: 0.22rem;
 }
@@ -2401,6 +2407,9 @@ html {
 
   .md\:w-o-1180 {
     width: 11.80rem;
+  }
+  .md\:w-o-1380 {
+    width: 13.80rem;
   }
 
   .md\:w-o-322 {
